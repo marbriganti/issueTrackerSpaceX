@@ -1,0 +1,25 @@
+{
+  "name": "issuetrackerspacex",
+  "version": "1.0.0",
+  "description": "Endpoint to create tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marbriganti/issueTrackerSpaceX.git"
+  },
+  "author": "Marco Briganti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marbriganti/issueTrackerSpaceX/issues"
+  },
+  "homepage": "https://github.com/marbriganti/issueTrackerSpaceX#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "request": "^2.88.2"
+  }
+}
