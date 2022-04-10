@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "ee618f00-3af8-4590-a2b1-19b7df2f6754",
+		"name": "spaceX-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "spaceX-TEST",
+			"item": [
+				{
+					"name": "Get Trello List - TEST",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "trelloapikey",
+								"value": "{{apiKey}}",
+								"type": "text"
+							},
+							{
+								"key": "trelloapitoken",
+								"value": "{{apiToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/boardLists?idBoard=62103371db6495047095e005&listName=To Do",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"boardLists"
+							],
+							"query": [
+								{
+									"key": "idBoard",
+									"value": "62103371db6495047095e005"
+								},
+								{
+									"key": "listName",
+									"value": "To Do"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trello_members - TEST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/members/{{memberId}}?key={{apiKey}}&token={{apiToken}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"members",
+								"{{memberId}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{apiKey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{apiToken}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Trello_members",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.trello.com/1/members/{{memberId}}?key={{apiKey}}&token={{apiToken}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"trello",
+										"com"
+									],
+									"path": [
+										"1",
+										"members",
+										"{{memberId}}"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "{{apiKey}}"
+										},
+										{
+											"key": "token",
+											"value": "{{apiToken}}"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Trello_BoardLists_H  - TEST",
+					"request": {
+						"auth": {
+							"type": "oauth1",
+							"oauth1": [
+								{
+									"key": "tokenSecret",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "token",
+									"value": "{{apiToken}}",
+									"type": "string"
+								},
+								{
+									"key": "consumerSecret",
+									"value": "{{apiToken}}",
+									"type": "string"
+								},
+								{
+									"key": "consumerKey",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "addParamsToHeader",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "signatureMethod",
+									"value": "HMAC-SHA256",
+									"type": "string"
+								},
+								{
+									"key": "version",
+									"value": "1.0",
+									"type": "string"
+								},
+								{
+									"key": "addEmptyParamsToSign",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "OAuth oauth_consumer_key=\\\"{{apiKey}}\\\", oauth_token=\\\"{{apiToken}}\\\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/62103371db6495047095e005/lists",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								"62103371db6495047095e005",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
